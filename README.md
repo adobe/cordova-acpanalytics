@@ -1,6 +1,9 @@
 
 # AEP Analytics SDK Cordova Plugin  
   
+  Coming soon
+<!---
+  
 - [Prerequisites](#prerequisites)  
 - [Using the Plugin](#using-the-plugin)  
 - [Running Test](#running-tests)
@@ -124,3 +127,5 @@ See [CONTRIBUTING](CONTRIBUTING.md)
   
 ## Licensing  
 See [LICENSING](LICENSE)
+
+-->
