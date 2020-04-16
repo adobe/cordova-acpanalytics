@@ -49,7 +49,7 @@
 {
     [self.commandDelegate runInBackground:^{
         [ACPAnalytics sendQueuedHits];
-        CDVPluginResult* pluginResult = nil;
+        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }];
 }
@@ -58,7 +58,7 @@
 {
     [self.commandDelegate runInBackground:^{
         [ACPAnalytics clearQueue];
-        CDVPluginResult* pluginResult = nil;
+        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }];
 }
@@ -98,7 +98,8 @@
     [self.commandDelegate runInBackground:^{
         NSString *vid = [command.arguments objectAtIndex:0];
         [ACPAnalytics setVisitorIdentifier:vid];
-        [self.commandDelegate sendPluginResult:nil callbackId:command.callbackId];
+        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }];
 }
 
