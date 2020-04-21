@@ -1,63 +1,40 @@
 
-# AEP Analytics SDK Cordova Plugin  
-  
-Coming soon
-  
-<!---
+# Adobe Experience Platform - Analytics plugin for Cordova apps
 
 [![CI](https://github.com/adobe/cordova-acpanalytics/workflows/CI/badge.svg)](https://github.com/adobe/cordova-acpanalytics/actions)
 [![npm](https://img.shields.io/npm/v/@adobe/cordova-acpanalytics)](https://www.npmjs.com/package/@adobe/cordova-acpanalytics)
 [![GitHub](https://img.shields.io/github/license/adobe/cordova-acpanalytics)](https://github.com/adobe/cordova-acpanalytics/blob/master/LICENSE)
 
 - [Prerequisites](#prerequisites)  
-- [Using the Plugin](#using-the-plugin)  
-- [Running Test](#running-tests)
-- [Sample](#sample)  
+- [Installation](#installation)
 - [Usage](#usage)  
+- [Running Tests](#running-tests)
+- [Sample App](#sample-app)  
 - [Contributing](#contributing)  
 - [Licensing](#licensing)  
-  
+
 ## Prerequisites  
-  
+
 Cordova is distributed via [Node Package Management](https://www.npmjs.com/) (aka - `npm`).  
-  
+
 In order to install and build Cordova applications you will need to have `Node.js` installed. [Install Node.js](https://nodejs.org/en/).  
-  
+
 Once Node.js is installed, you can install the Cordova framework from terminal:  
-  
+
 ```  
 sudo npm install -g cordova  
 ```  
-  
-## Using the Plugin  
-  
-To start using the AEP SDK for Cordova, navigate to the directory of your Cordova app and install the plugin:  
-  
-```  
-cordova plugin add https://github.com/adobe/cordova-acpanalytics.git 
-```  
-  
-Check out the documentation for help with APIs  
 
-## Running Tests
-Install cordova-paramedic `https://github.com/apache/cordova-paramedic`
-```bash
-npm install -g cordova-paramedic
-```
+## Installation
 
-Run the tests
+To start using the Analytics plugin for Cordova, navigate to the directory of your Cordova app and install the plugin:
 ```
-cordova-paramedic --platform ios --plugin . --verbose
+cordova plugin add https://github.com/adobe/cordova-acpanalytics.git
 ```
-```
-cordova-paramedic --platform android --plugin . --verbose
-```
-  
-## Sample 
-  
-A Cordova app for testing the plugin is located in the `https://git.corp.adobe.com/dms-mobile/cordova-samples`. The app is configured for both iOS and Android platforms.  
+Check out the documentation for help with APIs
 
 ## Usage
+
 ##### Getting the SDK version:
 ```js
 ACPAnalytics.extensionVersion(function(version){  
@@ -67,7 +44,7 @@ ACPAnalytics.extensionVersion(function(version){
 });
 ```
 ##### Registering the extension with ACPCore:  
-  
+
  > Note: It is required to initialize the SDK via native code inside your AppDelegate and MainApplication for iOS and Android respectively. For more information see how to initialize [Core](https://aep-sdks.gitbook.io/docs/getting-started/initialize-the-sdk).  
   ##### **iOS**  
 ```objective-c
@@ -77,12 +54,12 @@ ACPAnalytics.extensionVersion(function(version){
   ##### **Android:**  
 ```java
 import com.adobe.marketing.mobile.Analytics;  
-Analytics.registerExtension(); 
+Analytics.registerExtension();
 ```
 ##### Get the tracking identifier:
 ```js
 ACPAnalytics.getTrackingIdentifier(function(trackingId) {  
-    console.log(trackingId); 
+    console.log(trackingId);
 }, function(error){  
     console.log(error);  
 });
@@ -127,10 +104,29 @@ ACPAnalytics.getVisitorIdentifier(function(visitorId) {
     console.log(error);  
 });
 ```  
-## Contributing  
-See [CONTRIBUTING](CONTRIBUTING.md)  
-  
-## Licensing  
-See [LICENSING](LICENSE)
 
--->
+## Running Tests
+Install cordova-paramedic `https://github.com/apache/cordova-paramedic`
+```bash
+npm install -g cordova-paramedic
+```
+
+Run the tests
+```
+cordova-paramedic --platform ios --plugin . --verbose
+```
+```
+cordova-paramedic --platform android --plugin . --verbose
+```
+
+## Sample App
+
+A Cordova app for testing the plugin is located in the `https://github.com/adobe/cordova-acpsample`. The app is configured for both iOS and Android platforms.  
+
+## Contributing
+Looking to contribute to this project? Please review our [Contributing guidelines](.github/CONTRIBUTING.md) prior to opening a pull request.
+
+We look forward to working with you!
+
+## Licensing  
+This project is licensed under the Apache V2 License. See [LICENSE](LICENSE) for more information.
