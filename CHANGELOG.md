@@ -1,2 +1,2 @@
-### 1.0.0 (25 Mar, 2019)
-- Initial release of ACPAnalytics plugin for Cordova
+### 0.0.1 (21 Apr, 2020)
+- Initial release of Adobe Experience Platform - Analytics plugin for Cordova apps
