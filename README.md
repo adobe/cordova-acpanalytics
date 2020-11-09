@@ -3,7 +3,7 @@
 
 [![CI](https://github.com/adobe/cordova-acpanalytics/workflows/CI/badge.svg)](https://github.com/adobe/cordova-acpanalytics/actions)
 [![npm](https://img.shields.io/npm/v/@adobe/cordova-acpanalytics)](https://www.npmjs.com/package/@adobe/cordova-acpanalytics)
-[![GitHub](https://img.shields.io/github/license/adobe/cordova-acpanalytics)](https://github.com/adobe/cordova-acpanalytics/blob/master/LICENSE)
+[![GitHub](https://img.shields.io/github/license/adobe/cordova-acpanalytics)](https://github.com/adobe/cordova-acpanalytics/blob/main/LICENSE)
 
 - [Prerequisites](#prerequisites)  
 - [Installation](#installation)
